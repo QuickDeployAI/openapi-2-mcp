@@ -1,0 +1,47 @@
+openapi: "3.0.3"
+info:
+  title: Petstore
+  version: "1.0.0"
+servers:
+  - url: https://petstore3.swagger.io/api/v3
+paths:
+  /pet/{petId}:
+    get:
+      operationId: getPetById
+      summary: Find pet by ID
+      parameters:
+        - name: petId
+          in: path
+          required: true
+          description: ID of pet to return
+          schema:
+            type: integer
+  /pet/findByStatus:
+    get:
+      operationId: findPetsByStatus
+      summary: Find pets by status
+      parameters:
+        - name: status
+          in: query
+          description: Status values that need to be considered for filter
+          schema:
+            type: string
+            enum: [available, pending, sold]
+  /pet:
+    post:
+      operationId: addPet
+      summary: Add a new pet to the store
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name, status]
+              properties:
+                name:
+                  type: string
+                  description: Pet name
+                status:
+                  type: string
+                  enum: [available, pending, sold]

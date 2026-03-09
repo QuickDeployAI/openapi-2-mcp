@@ -1,0 +1,40 @@
+{
+  "name": "openapi-2-mcp",
+  "version": "1.0.0",
+  "description": "A simple mcp to wrap the x apis.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuickDeployAI/openapi-2-mcp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/QuickDeployAI/openapi-2-mcp/issues"
+  },
+  "homepage": "https://github.com/QuickDeployAI/openapi-2-mcp#readme",
+  "dependencies": {
+    "@readme/openapi-parser": "^6.0.0",
+    "commander": "^14.0.3",
+    "fastmcp": "^3.34.0",
+    "openapi-types": "^12.1.3",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.4.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "bin": {
+    "openapi-2-mcp": "./dist/index.js"
+  }
+}
