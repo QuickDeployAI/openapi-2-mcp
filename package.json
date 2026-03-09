@@ -1,7 +1,7 @@
 {
-  "name": "openapi-2-mcp",
-  "version": "1.0.0",
-  "description": "A simple mcp to wrap the x apis.",
+  "name": "@quickdeployai/openapi-2-mcp",
+  "version": "0.1.0",
+  "description": "Build an MCP (Model Context Protocol) server from an OpenAPI spec. Exposes every API operation as an MCP tool so AI agents can interact with any REST API.",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
@@ -13,14 +13,30 @@
     "type": "git",
     "url": "git+https://github.com/QuickDeployAI/openapi-2-mcp.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "mcp",
+    "openapi",
+    "model-context-protocol",
+    "ai",
+    "tools",
+    "fastmcp",
+    "api"
+  ],
+  "author": "QuickDeployAI",
   "license": "ISC",
   "type": "module",
   "bugs": {
     "url": "https://github.com/QuickDeployAI/openapi-2-mcp/issues"
   },
   "homepage": "https://github.com/QuickDeployAI/openapi-2-mcp#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "dependencies": {
     "@readme/openapi-parser": "^6.0.0",
     "commander": "^14.0.3",
@@ -29,7 +45,9 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "^25.4.0",
+    "js-yaml": "^4.1.0",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "vitest": "^4.0.18"
